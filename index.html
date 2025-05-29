@@ -8,27 +8,148 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #f9f9f9; color: #222; line-height: 1.6; }
-    header { background: #dc143c; color: #fff; padding: 60px 20px 80px; text-align: center; position: relative; animation: fadeIn 1s ease-out; }
-    .logo { position: absolute; top: 20px; left: 20px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #ffeef0);
+      color: #222;
+      line-height: 1.6;
+      animation: fadeBg 10s ease infinite alternate;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+    }
+    nav a {
+      margin-left: 20px;
+      color: #dc143c;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #222;
+    }
+    header {
+      background: #dc143c;
+      color: #fff;
+      padding: 100px 20px 80px;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 1s ease-out;
+    }
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      animation: bounce 2s infinite;
+    }
     .logo img { height: 50px; }
     header h1 { font-size: 2.5rem; }
     header p { font-size: 1.2rem; margin-top: 10px; }
-    .btn { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #fff; color: #dc143c; font-weight: bold; border-radius: 8px; text-decoration: none; transition: 0.3s ease; }
-    .btn:hover { background: #eee; }
-    section { padding: 60px 20px; max-width: 800px; margin: auto; animation: fadeUp 1s ease-out; }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #fff;
+      color: #dc143c;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      opacity: 0;
+      animation: slideIn 1s ease-out 1.5s forwards;
+      transform: translateY(30px);
+    }
+    .btn:hover {
+      background: #eee;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+      animation: fadeUp 1s ease-out;
+      transition: background 0.3s;
+    }
+    section:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
     .bonus, .testimonials, .faq { margin-top: 40px; }
-    h2 { color: #dc143c; margin-bottom: 20px; }
+    h2 {
+      color: #dc143c;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     ul { margin-left: 20px; }
-    .testimonial { background: #fff; border-left: 5px solid #dc143c; padding: 15px 20px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-    footer { text-align: center; font-size: 0.9rem; padding: 30px 20px; background: #f1f1f1; color: #555; }
-    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-    @keyframes fadeUp { from {transform: translateY(30px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+    .testimonial {
+      background: #fff;
+      border-left: 5px solid #dc143c;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      animation: fadeUp 1s ease-out;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 30px 20px;
+      background: #f1f1f1;
+      color: #555;
+    }
+    .icon {
+      font-size: 1.5rem;
+      color: #dc143c;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeUp {
+      from {transform: translateY(30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    @keyframes slideIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes fadeBg {
+      0% { background-color: #ffeef0; }
+      100% { background-color: #fff5f7; }
+    }
   </style>
 </head>
 <body>
+  <nav>
+    <div><strong>MaxBonus</strong></div>
+    <div>
+      <a href="#bonus">Bonus</a>
+      <a href="#avis">Avis</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </nav>
   <header>
     <div class="logo">
       <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2c/Winamax.svg/1200px-Winamax.svg.png" alt="Logo Winamax">
@@ -38,8 +159,8 @@
     <a href="https://www.winamax.fr" class="btn">S'inscrire sur Winamax</a>
   </header>
 
-  <section class="bonus">
-    <h2>Le Bonus en Détail</h2>
+  <section id="bonus" class="bonus">
+    <h2><i class="ph ph-gift icon"></i> Le Bonus en Détail</h2>
     <ul>
       <li>✅ Jusqu'à 100€ offerts sur votre premier dépôt</li>
       <li>✅ Utilisable sur les paris sportifs et le poker</li>
@@ -47,8 +168,8 @@
     </ul>
   </section>
 
-  <section class="testimonials">
-    <h2>Avis de Joueurs</h2>
+  <section id="avis" class="testimonials">
+    <h2><i class="ph ph-chat-teardrop icon"></i> Avis de Joueurs</h2>
     <div class="testimonial">
       "J'ai reçu mon bonus en moins de 5 minutes ! Super simple."
     </div>
@@ -57,8 +178,8 @@
     </div>
   </section>
 
-  <section class="faq">
-    <h2>Questions Fréquentes</h2>
+  <section id="faq" class="faq">
+    <h2><i class="ph ph-question icon"></i> Questions Fréquentes</h2>
     <ul>
       <li><strong>Comment activer mon bonus ?</strong> En créant votre compte et en effectuant un dépôt.</li>
       <li><strong>Dois-je entrer un code ?</strong> Non, le bonus est automatique via ce lien.</li>
