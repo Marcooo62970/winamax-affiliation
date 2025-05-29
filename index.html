@@ -11,7 +11,9 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Poppins', sans-serif; background: #f9f9f9; color: #222; line-height: 1.6; }
-    header { background: #dc143c; color: #fff; padding: 80px 20px; text-align: center; animation: fadeIn 1s ease-out; }
+    header { background: #dc143c; color: #fff; padding: 60px 20px 80px; text-align: center; position: relative; animation: fadeIn 1s ease-out; }
+    .logo { position: absolute; top: 20px; left: 20px; }
+    .logo img { height: 50px; }
     header h1 { font-size: 2.5rem; }
     header p { font-size: 1.2rem; margin-top: 10px; }
     .btn { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #fff; color: #dc143c; font-weight: bold; border-radius: 8px; text-decoration: none; transition: 0.3s ease; }
@@ -28,6 +30,9 @@
 </head>
 <body>
   <header>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2c/Winamax.svg/1200px-Winamax.svg.png" alt="Logo Winamax">
+    </div>
     <h1>100€ Offerts sur Winamax</h1>
     <p>Profitez de l'offre de bienvenue sur le site n°1 du poker et des paris sportifs en France</p>
     <a href="https://www.winamax.fr" class="btn">S'inscrire sur Winamax</a>
