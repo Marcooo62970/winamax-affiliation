@@ -1,47 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winamax - Bonus de bienvenue</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #1c1c1c;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .container {
-            padding: 50px 20px;
-        }
-        h1 {
-            color: #e50914;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 30px;
-            font-size: 18px;
-            background-color: #e50914;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background-color: #c40811;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Obtenez jusqu'à 100€ offerts avec Winamax. Inscrivez-vous aujourd'hui !" />
+  <title>Bonus Winamax - Jusqu'à 100€ Offerts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #f9f9f9; color: #222; line-height: 1.6; }
+    header { background: #dc143c; color: #fff; padding: 80px 20px; text-align: center; animation: fadeIn 1s ease-out; }
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.2rem; margin-top: 10px; }
+    .btn { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #fff; color: #dc143c; font-weight: bold; border-radius: 8px; text-decoration: none; transition: 0.3s ease; }
+    .btn:hover { background: #eee; }
+    section { padding: 60px 20px; max-width: 800px; margin: auto; animation: fadeUp 1s ease-out; }
+    .bonus, .testimonials, .faq { margin-top: 40px; }
+    h2 { color: #dc143c; margin-bottom: 20px; }
+    ul { margin-left: 20px; }
+    .testimonial { background: #fff; border-left: 5px solid #dc143c; padding: 15px 20px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    footer { text-align: center; font-size: 0.9rem; padding: 30px 20px; background: #f1f1f1; color: #555; }
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    @keyframes fadeUp { from {transform: translateY(30px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Gagnez jusqu'à 100€ offerts sur Winamax</h1>
-        <p>Inscrivez-vous dès maintenant et profitez du bonus de bienvenue !</p>
-        <a href="#" class="btn">S'inscrire sur Winamax</a>
-        <p style="margin-top: 40px; font-size: 14px; color: #aaa;">Ajoutez votre lien affilié dans le fichier index.html</p>
+  <header>
+    <h1>100€ Offerts sur Winamax</h1>
+    <p>Profitez de l'offre de bienvenue sur le site n°1 du poker et des paris sportifs en France</p>
+    <a href="https://www.winamax.fr" class="btn">S'inscrire sur Winamax</a>
+  </header>
+
+  <section class="bonus">
+    <h2>Le Bonus en Détail</h2>
+    <ul>
+      <li>✅ Jusqu'à 100€ offerts sur votre premier dépôt</li>
+      <li>✅ Utilisable sur les paris sportifs et le poker</li>
+      <li>✅ Aucune condition complexe : simple et rapide</li>
+    </ul>
+  </section>
+
+  <section class="testimonials">
+    <h2>Avis de Joueurs</h2>
+    <div class="testimonial">
+      "J'ai reçu mon bonus en moins de 5 minutes ! Super simple."
     </div>
+    <div class="testimonial">
+      "Winamax a la meilleure appli de poker, et le bonus valait le coup."
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Questions Fréquentes</h2>
+    <ul>
+      <li><strong>Comment activer mon bonus ?</strong> En créant votre compte et en effectuant un dépôt.</li>
+      <li><strong>Dois-je entrer un code ?</strong> Non, le bonus est automatique via ce lien.</li>
+      <li><strong>Est-ce que Winamax est fiable ?</strong> Oui, c’est un site français réglementé par l’ANJ.</li>
+    </ul>
+  </section>
+
+  <footer>
+    +18 | Jouer comporte des risques | Site affilié - Non officiel | <a href="https://www.winamax.fr">Winamax.fr</a>
+  </footer>
 </body>
 </html>
